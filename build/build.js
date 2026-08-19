@@ -63,14 +63,14 @@ for (const f of ["hero-club-photo.jpg", "app-scan-photo.png", "maya-avatar.png",
 const symb = data.logoData["symbol-color"];
 fs.writeFileSync(path.join(PAGE, "assets", "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${symb.viewBox}">${symb.body}</svg>`);
 
-// root: keep what foractive.info did before (it framed www.foractive.com) — as a redirect
+// root: foractive.info → the running-clubs page
 fs.writeFileSync(path.join(OUT, "index.html"), `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>ForActive</title>
+<html lang="en"><head><meta charset="utf-8"><title>ForActive for running clubs</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://www.foractive.com/">
-<link rel="canonical" href="https://www.foractive.com/">
-<script>location.replace("https://www.foractive.com/");</script>
-</head><body><p>Redirecting to <a href="https://www.foractive.com/">foractive.com</a>…</p></body></html>
+<meta http-equiv="refresh" content="0; url=https://foractive.info/running_clubs/">
+<link rel="canonical" href="https://foractive.info/running_clubs/">
+<script>location.replace("https://foractive.info/running_clubs/");</script>
+</head><body><p>Redirecting to <a href="https://foractive.info/running_clubs/">foractive.info/running_clubs</a>…</p></body></html>
 `);
 fs.writeFileSync(path.join(OUT, "404.html"), `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><title>ForActive</title><meta name="robots" content="noindex">
