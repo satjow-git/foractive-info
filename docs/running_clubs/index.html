@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForActive for running clubs: sign-ups, check-ins and memberships</title>
+<meta name="description" content="A newcomer signs up for one run and pays before they show up. They check in when they arrive. Keep coming back and they'll get offered your membership when it's cheaper for them. You just run the club.">
+<link rel="canonical" href="https://foractive.info/running_clubs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ForActive">
+<meta property="og:title" content="ForActive for running clubs">
+<meta property="og:description" content="Sign-ups, check-ins and memberships for running clubs. A newcomer signs up for one run, checks in when they arrive, and gets offered your membership when it's cheaper for them.">
+<meta property="og:url" content="https://foractive.info/running_clubs/">
+<meta property="og:image" content="https://foractive.info/running_clubs/assets/hero-club-photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="fi-check-circle-20" viewBox="0 0 20 20"><path d="M 15.917 8.333 C 15.917 12.521 12.521 15.917 8.333 15.917 L 8.333 17.417 C 13.35 17.417 17.417 13.35 17.417 8.333 L 15.917 8.333 Z M 8.333 15.917 C 4.145 15.917 0.75 12.521 0.75 8.333 L -0.75 8.333 C -0.75 13.35 3.317 17.417 8.333 17.417 L 8.333 15.917 Z M 0.75 8.333 C 0.75 4.145 4.145 0.75 8.333 0.75 L 8.333 -0.75 C 3.317 -0.75 -0.75 3.317 -0.75 8.333 L 0.75 8.333 Z M 8.333 0.75 C 12.521 0.75 15.917 4.145 15.917 8.333 L 17.417 8.333 C 17.417 3.317 13.35 -0.75 8.333 -0.75 L 8.333 0.75 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 1.667 1.667)"/><path d="M -0.519 2.541 L 1.913 4.876 L 2.952 3.794 L 0.519 1.459 L -0.519 2.541 Z M 4.337 4.876 L 8.853 0.541 L 7.814 -0.541 L 3.298 3.794 L 4.337 4.876 Z M 1.913 4.876 C 2.59 5.526 3.66 5.526 4.337 4.876 L 3.298 3.794 C 3.201 3.887 3.049 3.887 2.952 3.794 L 1.913 4.876 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 5.833 7.500)"/></symbol>
+<symbol id="fi-check-20" viewBox="0 0 20 20"><path d="M 5 8.333 L 4.47 8.864 L 5 9.394 L 5.53 8.864 L 5 8.333 Z M -0.53 3.864 L 4.47 8.864 L 5.53 7.803 L 0.53 2.803 L -0.53 3.864 Z M 5.53 8.864 L 13.864 0.53 L 12.803 -0.53 L 4.47 7.803 L 5.53 8.864 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 3.333 5.833)"/></symbol>
+<symbol id="fi-arrow-left-24" viewBox="0 0 24 24"><path d="M 0 7 L -0.55 6.49 L -1.023 7 L -0.55 7.51 L 0 7 Z M 14 6.25 L 0 6.25 L 0 7.75 L 14 7.75 L 14 6.25 Z M 5.95 -0.51 L -0.55 6.49 L 0.55 7.51 L 7.05 0.51 L 5.95 -0.51 Z M -0.55 7.51 L 5.95 14.51 L 7.05 13.49 L 0.55 6.49 L -0.55 7.51 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 6 5)"/></symbol>
+<symbol id="fi-chevron-right-20" viewBox="0 0 20 20"><path d="M -0.53 0.53 L 3.346 4.407 L 4.407 3.346 L 0.53 -0.53 L -0.53 0.53 Z M 5.821 4.407 L 9.697 0.53 L 8.636 -0.53 L 4.76 3.346 L 5.821 4.407 Z M 3.346 4.407 C 4.029 5.09 5.137 5.09 5.821 4.407 L 4.76 3.346 C 4.662 3.444 4.504 3.444 4.407 3.346 L 3.346 4.407 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(0 -1 1 0 7.708 14.375)"/></symbol>
+<symbol id="fi-close-line-24" viewBox="0 0 24 24"><path d="M 0.53 11.53 L 11.53 0.53 L 10.47 -0.53 L -0.53 10.47 L 0.53 11.53 Z M 11.53 10.47 L 0.53 -0.53 L -0.53 0.53 L 10.47 11.53 L 11.53 10.47 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 6.500 6.500)"/></symbol>
+<symbol id="fi-close-line-20" viewBox="0 0 20 20"><path d="M 0.53 9.697 L 9.697 0.53 L 8.636 -0.53 L -0.53 8.636 L 0.53 9.697 Z M 9.697 8.636 L 0.53 -0.53 L -0.53 0.53 L 8.636 9.697 L 9.697 8.636 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 5.417 5.417)"/></symbol>
+<symbol id="fi-security-20" viewBox="0 0 20 20"><path d="M 1.667 0.75 L 13.333 0.75 L 13.333 -0.75 L 1.667 -0.75 L 1.667 0.75 Z M 13.333 0.75 C 13.84 0.75 14.25 1.16 14.25 1.667 L 15.75 1.667 C 15.75 0.332 14.668 -0.75 13.333 -0.75 L 13.333 0.75 Z M 14.25 1.667 L 14.25 7.5 L 15.75 7.5 L 15.75 1.667 L 14.25 1.667 Z M 14.25 7.5 C 14.25 8.006 13.84 8.417 13.333 8.417 L 13.333 9.917 C 14.668 9.917 15.75 8.835 15.75 7.5 L 14.25 7.5 Z M 13.333 8.417 L 1.667 8.417 L 1.667 9.917 L 13.333 9.917 L 13.333 8.417 Z M 1.667 8.417 C 1.16 8.417 0.75 8.006 0.75 7.5 L -0.75 7.5 C -0.75 8.835 0.332 9.917 1.667 9.917 L 1.667 8.417 Z M 0.75 7.5 L 0.75 1.667 L -0.75 1.667 L -0.75 7.5 L 0.75 7.5 Z M 0.75 1.667 C 0.75 1.16 1.16 0.75 1.667 0.75 L 1.667 -0.75 C 0.332 -0.75 -0.75 0.332 -0.75 1.667 L 0.75 1.667 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 2.500 9.167)"/><path d="M 0 4.167 L -0.75 4.167 L 0 4.167 Z M 4.167 0 L 4.167 -0.75 L 4.167 0 Z M 0.75 7.5 L 0.75 4.167 L -0.75 4.167 L -0.75 7.5 L 0.75 7.5 Z M 0.75 4.167 C 0.75 3.261 1.11 2.391 1.751 1.751 L 0.69 0.69 C -0.232 1.612 -0.75 2.863 -0.75 4.167 L 0.75 4.167 Z M 1.751 1.751 C 2.391 1.11 3.261 0.75 4.167 0.75 L 4.167 -0.75 C 2.863 -0.75 1.612 -0.232 0.69 0.69 L 1.751 1.751 Z M 4.167 0.75 C 5.073 0.75 5.942 1.11 6.583 1.751 L 7.643 0.69 C 6.721 -0.232 5.471 -0.75 4.167 -0.75 L 4.167 0.75 Z M 6.583 1.751 C 7.223 2.391 7.583 3.261 7.583 4.167 L 9.083 4.167 C 9.083 2.863 8.565 1.612 7.643 0.69 L 6.583 1.751 Z M 7.583 4.167 L 7.583 7.5 L 9.083 7.5 L 9.083 4.167 L 7.583 4.167 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 5.833 1.667)"/></symbol>
+<symbol id="fi-arrow-right-20" viewBox="0 0 20 20"><path d="M 4.867 -0.51 L 0.082 4.643 L 1.181 5.663 L 5.966 0.51 L 4.867 -0.51 Z M 0.082 7.024 L 4.867 12.177 L 5.966 11.156 L 1.181 6.003 L 0.082 7.024 Z M 0.082 4.643 C -0.541 5.314 -0.541 6.353 0.082 7.024 L 1.181 6.003 C 1.092 5.908 1.092 5.759 1.181 5.663 L 0.082 4.643 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(-1 0 0 -1 15 15.833)"/><path d="M 10.5 -0.75 L 0 -0.75 L 0 0.75 L 10.5 0.75 L 10.5 -0.75 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 4 10)"/></symbol>
+<symbol id="fi-chevron-down-20" viewBox="0 0 20 20"><path d="M -0.53 0.53 L 3.346 4.407 L 4.407 3.346 L 0.53 -0.53 L -0.53 0.53 Z M 5.821 4.407 L 9.697 0.53 L 8.636 -0.53 L 4.76 3.346 L 5.821 4.407 Z M 3.346 4.407 C 4.029 5.09 5.137 5.09 5.821 4.407 L 4.76 3.346 C 4.662 3.444 4.504 3.444 4.407 3.346 L 3.346 4.407 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 5.417 7.500)"/></symbol>
+<symbol id="si-card" viewBox="0 0 24 24"><path d="M 2 16.75 L 16 16.75 L 16 15.25 L 2 15.25 L 2 16.75 Z M 18.75 14 L 18.75 2 L 17.25 2 L 17.25 14 L 18.75 14 Z M 16 -0.75 L 2 -0.75 L 2 0.75 L 16 0.75 L 16 -0.75 Z M -0.75 2 L -0.75 6 L 0.75 6 L 0.75 2 L -0.75 2 Z M -0.75 6 L -0.75 14 L 0.75 14 L 0.75 6 L -0.75 6 Z M 18 5.25 L 0 5.25 L 0 6.75 L 18 6.75 L 18 5.25 Z M 11 12.75 L 15 12.75 L 15 11.25 L 11 11.25 L 11 12.75 Z M 18.75 2 C 18.75 0.481 17.519 -0.75 16 -0.75 L 16 0.75 C 16.69 0.75 17.25 1.31 17.25 2 L 18.75 2 Z M 16 16.75 C 17.519 16.75 18.75 15.519 18.75 14 L 17.25 14 C 17.25 14.69 16.69 15.25 16 15.25 L 16 16.75 Z M 2 15.25 C 1.31 15.25 0.75 14.69 0.75 14 L -0.75 14 C -0.75 15.519 0.481 16.75 2 16.75 L 2 15.25 Z M 2 -0.75 C 0.481 -0.75 -0.75 0.481 -0.75 2 L 0.75 2 C 0.75 1.31 1.31 0.75 2 0.75 L 2 -0.75 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 3 4)"/></symbol>
+<symbol id="si-cash" viewBox="0 0 24 24"><path d="M 13.2 1.8 L 13.2 2.55 L 13.21 2.55 L 13.22 2.55 L 13.2 1.8 Z M 5.4 10.2 L 5.389 10.95 L 5.4 10.95 L 5.4 10.2 Z M 2.883 10.402 L 2.753 9.663 L 2.883 10.402 Z M 0.75 8.239 L 0.75 2.06 L -0.75 2.06 L -0.75 8.239 L 0.75 8.239 Z M 1.007 1.477 C 1.582 1.177 2.755 0.75 4.8 0.75 L 4.8 -0.75 C 2.539 -0.75 1.123 -0.276 0.312 0.148 L 1.007 1.477 Z M 4.8 0.75 C 6.451 0.75 7.48 1.154 8.641 1.6 C 9.834 2.059 11.139 2.55 13.2 2.55 L 13.2 1.05 C 11.421 1.05 10.326 0.641 9.179 0.2 C 8 -0.254 6.749 -0.75 4.8 -0.75 L 4.8 0.75 Z M 13.22 2.55 C 13.986 2.529 14.748 2.464 15.505 2.355 L 15.291 0.871 C 14.592 0.971 13.887 1.031 13.18 1.05 L 13.22 2.55 Z M 17.25 3.715 L 17.25 10.086 L 18.75 10.086 L 18.75 3.715 L 17.25 3.715 Z M 16.718 10.919 C 16.091 11.083 15.127 11.25 13.8 11.25 L 13.8 12.75 C 15.255 12.75 16.346 12.567 17.098 12.37 L 16.718 10.919 Z M 13.8 11.25 C 12.505 11.25 11.334 10.848 9.975 10.389 C 8.643 9.94 7.157 9.45 5.4 9.45 L 5.4 10.95 C 6.883 10.95 8.157 11.36 9.495 11.811 C 10.806 12.252 12.215 12.75 13.8 12.75 L 13.8 11.25 Z M 5.411 9.45 C 4.517 9.438 3.628 9.509 2.753 9.663 L 3.012 11.141 C 3.795 11.003 4.591 10.939 5.389 10.95 L 5.411 9.45 Z M 15.505 2.355 C 16.444 2.22 17.25 2.908 17.25 3.715 L 18.75 3.715 C 18.75 1.855 16.99 0.626 15.291 0.871 L 15.505 2.355 Z M 0.75 2.06 C 0.75 1.721 0.881 1.544 1.007 1.477 L 0.312 0.148 C -0.471 0.558 -0.75 1.372 -0.75 2.06 L 0.75 2.06 Z M 17.25 10.086 C 17.25 10.551 17.007 10.843 16.718 10.919 L 17.098 12.37 C 18.201 12.081 18.75 11.06 18.75 10.086 L 17.25 10.086 Z M -0.75 8.239 C -0.75 10.246 1.261 11.449 3.012 11.141 L 2.753 9.663 C 1.688 9.851 0.75 9.092 0.75 8.239 L -0.75 8.239 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 3 6)"/><path d="M 3.967 2 L 3.227 2.119 C 3.228 2.124 3.229 2.129 3.229 2.134 L 3.967 2 Z M 3.229 2.134 C 3.349 2.794 2.94 3.25 2.35 3.25 L 2.35 4.75 C 3.916 4.75 4.985 3.406 4.705 1.866 L 3.229 2.134 Z M 2.35 3.25 C 1.656 3.25 0.91 2.631 0.771 1.866 L -0.705 2.134 C -0.445 3.569 0.886 4.75 2.35 4.75 L 2.35 3.25 Z M 0.771 1.866 C 0.651 1.206 1.06 0.75 1.65 0.75 L 1.65 -0.75 C 0.084 -0.75 -0.985 0.594 -0.705 2.134 L 0.771 1.866 Z M 1.65 0.75 C 2.36 0.75 3.105 1.362 3.227 2.119 L 4.708 1.881 C 4.47 0.398 3.098 -0.75 1.65 -0.75 L 1.65 0.75 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 3 6) matrix(1 0 0 1 7 4)"/><path d="M 3.379 -0.126 C 3.31 -0.534 2.922 -0.809 2.514 -0.739 C 2.106 -0.67 1.831 -0.282 1.901 0.126 L 3.379 -0.126 Z M 0.002 2.194 C -0.412 2.193 -0.749 2.528 -0.75 2.942 C -0.751 3.356 -0.416 3.693 -0.002 3.694 L 0.002 2.194 Z M 0.001 5.747 C -0.413 5.747 -0.749 6.082 -0.75 6.496 C -0.751 6.911 -0.415 7.247 -0.001 7.247 L 0.001 5.747 Z M 1.897 8.808 C 1.954 9.218 2.332 9.505 2.742 9.449 C 3.153 9.392 3.44 9.014 3.383 8.603 L 1.897 8.808 Z M 16.002 4.202 C 16.416 4.201 16.751 3.864 16.75 3.45 C 16.749 3.036 16.412 2.701 15.998 2.702 L 16.002 4.202 Z M 14.099 1.194 C 14.03 0.786 13.642 0.511 13.234 0.58 C 12.826 0.65 12.551 1.037 12.621 1.446 L 14.099 1.194 Z M 12.653 10.157 C 12.74 10.562 13.138 10.82 13.543 10.733 C 13.948 10.647 14.207 10.249 14.12 9.843 L 12.653 10.157 Z M 13.333 9.543 L 12.583 9.543 C 12.583 9.549 12.583 9.554 12.584 9.56 L 13.333 9.543 Z M 16 7.755 C 16.414 7.755 16.75 7.419 16.75 7.005 C 16.75 6.591 16.414 6.255 16 6.255 L 16 7.755 Z M 1.901 0.126 C 1.943 0.377 1.928 0.633 1.856 0.879 L 3.295 1.302 C 3.432 0.838 3.46 0.35 3.379 -0.126 L 1.901 0.126 Z M 1.856 0.879 C 1.784 1.124 1.656 1.355 1.478 1.553 L 2.594 2.554 C 2.919 2.193 3.159 1.766 3.295 1.302 L 1.856 0.879 Z M 1.478 1.553 C 1.3 1.752 1.076 1.914 0.821 2.025 L 1.422 3.4 C 1.869 3.204 2.27 2.916 2.594 2.554 L 1.478 1.553 Z M 0.821 2.025 C 0.565 2.137 0.286 2.195 0.002 2.194 L -0.002 3.694 C 0.488 3.696 0.974 3.595 1.422 3.4 L 0.821 2.025 Z M -0.001 7.247 C 0.474 7.248 0.927 7.413 1.275 7.704 L 2.237 6.554 C 1.614 6.032 0.819 5.749 0.001 5.747 L -0.001 7.247 Z M 1.275 7.704 C 1.622 7.995 1.839 8.388 1.897 8.808 L 3.383 8.603 C 3.273 7.803 2.862 7.076 2.237 6.554 L 1.275 7.704 Z M 15.998 2.702 C 15.532 2.703 15.085 2.546 14.738 2.266 L 13.796 3.433 C 14.417 3.934 15.199 4.204 16.002 4.202 L 15.998 2.702 Z M 14.738 2.266 C 14.392 1.986 14.169 1.604 14.099 1.194 L 12.621 1.446 C 12.754 2.228 13.174 2.931 13.796 3.433 L 14.738 2.266 Z M 14.12 9.843 C 14.098 9.739 14.085 9.633 14.083 9.527 L 12.584 9.56 C 12.588 9.76 12.611 9.96 12.653 10.157 L 14.12 9.843 Z M 14.083 9.543 C 14.083 9.081 14.276 8.63 14.631 8.292 L 13.597 7.205 C 12.953 7.819 12.583 8.659 12.583 9.543 L 14.083 9.543 Z M 14.631 8.292 C 14.988 7.952 15.48 7.755 16 7.755 L 16 6.255 C 15.105 6.255 14.241 6.593 13.597 7.205 L 14.631 8.292 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 3 6) matrix(1 0 0 1 1 1)"/></symbol>
+<symbol id="ni-home" viewBox="0 0 24 24"><g transform="translate(4 3)"><path d="M 15.317 6.402 L 14.823 6.967 L 15.317 6.402 Z M 6.683 1.152 L 6.189 0.588 L 6.683 1.152 Z M 2 18.75 L 14 18.75 L 14 17.25 L 2 17.25 L 2 18.75 Z M 16.75 16 L 16.75 7.908 L 15.25 7.908 L 15.25 16 L 16.75 16 Z M 5 14.75 L 11 14.75 L 11 13.25 L 5 13.25 L 5 14.75 Z M -0.75 7.908 L -0.75 16 L 0.75 16 L 0.75 7.908 L -0.75 7.908 Z M 15.811 5.838 L 9.811 0.588 L 8.823 1.717 L 14.823 6.967 L 15.811 5.838 Z M 6.189 0.588 L 0.189 5.838 L 1.177 6.967 L 7.177 1.717 L 6.189 0.588 Z M 16.75 7.908 C 16.75 7.115 16.408 6.36 15.811 5.838 L 14.823 6.967 C 15.094 7.204 15.25 7.547 15.25 7.908 L 16.75 7.908 Z M 14 18.75 C 15.519 18.75 16.75 17.519 16.75 16 L 15.25 16 C 15.25 16.69 14.69 17.25 14 17.25 L 14 18.75 Z M 9.811 0.588 C 8.774 -0.319 7.226 -0.319 6.189 0.588 L 7.177 1.717 C 7.648 1.304 8.352 1.304 8.823 1.717 L 9.811 0.588 Z M 2 17.25 C 1.31 17.25 0.75 16.69 0.75 16 L -0.75 16 C -0.75 17.519 0.481 18.75 2 18.75 L 2 17.25 Z M 0.75 7.908 C 0.75 7.547 0.906 7.204 1.177 6.967 L 0.189 5.838 C -0.408 6.36 -0.75 7.115 -0.75 7.908 L 0.75 7.908 Z" fill="currentColor" fill-rule="nonzero"></path></g></symbol>
+<symbol id="ni-earnings-filled" viewBox="0 0 24 24"><g transform="translate(1.25 4.25)"><path d="M 0 1.625 C 0 0.57 1.01 0 1.861 0 L 19.639 0 C 20.49 0 21.5 0.57 21.5 1.625 L 21.5 13.875 C 21.5 14.93 20.49 15.5 19.639 15.5 L 1.861 15.5 C 1.01 15.5 0 14.93 0 13.875 L 0 1.625 Z M 4.25 4.611 C 3.6 4.829 3 5.374 3 6.25 C 3 6.879 3.281 7.337 3.661 7.653 C 3.989 7.926 4.4 8.099 4.691 8.221 L 4.71 8.229 C 5.053 8.373 5.26 8.463 5.398 8.571 C 5.49 8.642 5.5 8.677 5.5 8.75 C 5.5 8.892 5.451 8.96 5.391 9.008 C 5.311 9.072 5.173 9.125 5 9.125 C 4.827 9.125 4.689 9.072 4.609 9.008 C 4.549 8.96 4.5 8.892 4.5 8.75 L 3 8.75 C 3 9.358 3.264 9.853 3.672 10.179 C 3.849 10.321 4.046 10.426 4.25 10.498 L 4.25 11.25 L 5.75 11.25 L 5.75 10.498 C 5.954 10.426 6.151 10.321 6.328 10.179 C 6.736 9.853 7 9.358 7 8.75 C 7 8.123 6.698 7.682 6.321 7.388 C 6.012 7.147 5.626 6.986 5.347 6.87 C 5.328 6.861 5.309 6.854 5.29 6.846 C 4.957 6.706 4.754 6.611 4.621 6.5 C 4.531 6.426 4.5 6.371 4.5 6.25 C 4.5 6.198 4.516 6.159 4.565 6.116 C 4.624 6.065 4.73 6.013 4.87 6.003 C 5.127 5.983 5.409 6.098 5.538 6.487 L 6.962 6.013 C 6.732 5.324 6.273 4.885 5.75 4.667 L 5.75 3.75 L 4.25 3.75 L 4.25 4.611 Z M 18.75 6.5 L 8.75 6.5 L 8.75 5 L 18.75 5 L 18.75 6.5 Z M 15.75 10.5 L 8.75 10.5 L 8.75 9 L 15.75 9 L 15.75 10.5 Z" fill="currentColor" fill-rule="evenodd"></path></g></symbol>
+<symbol id="ni-clients" viewBox="0 0 24 24"><circle cx="9.25" cy="6.25" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="9" r="1.25" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="2.75" y="12.75" width="12.5" height="7.5" rx="2.25" fill="none" stroke="currentColor" stroke-width="1.5"/><g transform="translate(13 14)"><path d="M 8.25 3 L 8.25 4 L 9.75 4 L 9.75 3 L 8.25 3 Z M 3 0.75 L 6 0.75 L 6 -0.75 L 3 -0.75 L 3 0.75 Z M 6 6.25 L 0 6.25 L 0 7.75 L 6 7.75 L 6 6.25 Z M 8.25 4 C 8.25 5.243 7.243 6.25 6 6.25 L 6 7.75 C 8.071 7.75 9.75 6.071 9.75 4 L 8.25 4 Z M 9.75 3 C 9.75 0.929 8.071 -0.75 6 -0.75 L 6 0.75 C 7.243 0.75 8.25 1.757 8.25 3 L 9.75 3 Z" fill="currentColor" fill-rule="nonzero"/></g></symbol>
+<symbol id="ni-calendar" viewBox="0 0 24 24"><g transform="translate(3 1)"><path d="M -0.75 4 L -0.75 18 L 0.75 18 L 0.75 4 L -0.75 4 Z M 1 19.75 L 17 19.75 L 17 18.25 L 1 18.25 L 1 19.75 Z M 18.75 18 L 18.75 4 L 17.25 4 L 17.25 18 L 18.75 18 Z M 17 2.25 L 1 2.25 L 1 3.75 L 17 3.75 L 17 2.25 Z M 18.75 4 C 18.75 3.034 17.966 2.25 17 2.25 L 17 3.75 C 17.138 3.75 17.25 3.862 17.25 4 L 18.75 4 Z M 17 19.75 C 17.966 19.75 18.75 18.966 18.75 18 L 17.25 18 C 17.25 18.138 17.138 18.25 17 18.25 L 17 19.75 Z M -0.75 18 C -0.75 18.966 0.034 19.75 1 19.75 L 1 18.25 C 0.862 18.25 0.75 18.138 0.75 18 L -0.75 18 Z M 0.75 4 C 0.75 3.862 0.862 3.75 1 3.75 L 1 2.25 C 0.034 2.25 -0.75 3.034 -0.75 4 L 0.75 4 Z M 0 9.75 L 18 9.75 L 18 8.25 L 0 8.25 L 0 9.75 Z M 4.25 0 L 4.25 6 L 5.75 6 L 5.75 0 L 4.25 0 Z M 12.25 0 L 12.25 6 L 13.75 6 L 13.75 0 L 12.25 0 Z" fill="currentColor" fill-rule="nonzero"></path></g></symbol>
+<symbol id="fi-add-24" viewBox="0 0 24 24"><path d="M 6.25 0 L 6.25 14 L 7.75 14 L 7.75 0 L 6.25 0 Z M 0 7.75 L 14 7.75 L 14 6.25 L 0 6.25 L 0 7.75 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 5 5)"/></symbol>
+<symbol id="si-social-instagram" viewBox="0 0 24 24"><path d="M 6.732 10.091 C 6.732 8.233 8.238 6.727 10.097 6.727 C 11.956 6.727 13.463 8.233 13.463 10.091 C 13.463 11.949 11.956 13.455 10.097 13.455 C 8.238 13.455 6.732 11.949 6.732 10.091 Z M 4.912 10.091 C 4.912 12.953 7.234 15.273 10.097 15.273 C 12.961 15.273 15.282 12.953 15.282 10.091 C 15.282 7.229 12.961 4.909 10.097 4.909 C 7.234 4.909 4.912 7.229 4.912 10.091 Z M 14.276 4.704 C 14.275 4.943 14.346 5.178 14.479 5.377 C 14.612 5.576 14.802 5.731 15.023 5.823 C 15.244 5.915 15.488 5.939 15.723 5.892 C 15.958 5.846 16.174 5.73 16.344 5.561 C 16.513 5.392 16.629 5.176 16.675 4.941 C 16.722 4.706 16.698 4.463 16.607 4.242 C 16.515 4.02 16.36 3.831 16.161 3.698 C 15.962 3.565 15.727 3.494 15.488 3.494 L 15.487 3.494 C 15.166 3.494 14.858 3.621 14.631 3.848 C 14.404 4.075 14.276 4.383 14.276 4.704 L 14.276 4.704 Z M 6.018 18.305 C 5.033 18.26 4.498 18.096 4.143 17.958 C 3.671 17.774 3.335 17.556 2.981 17.203 C 2.628 16.85 2.409 16.514 2.226 16.043 C 2.088 15.688 1.924 15.153 1.879 14.169 C 1.83 13.106 1.82 12.786 1.82 10.091 C 1.82 7.396 1.831 7.078 1.879 6.013 C 1.924 5.029 2.089 4.495 2.226 4.139 C 2.41 3.668 2.628 3.332 2.981 2.978 C 3.335 2.625 3.671 2.406 4.143 2.224 C 4.498 2.085 5.033 1.921 6.018 1.877 C 7.082 1.828 7.402 1.818 10.097 1.818 C 12.792 1.818 13.112 1.828 14.178 1.877 C 15.162 1.921 15.696 2.086 16.053 2.224 C 16.524 2.406 16.86 2.626 17.214 2.978 C 17.568 3.331 17.786 3.668 17.969 4.139 C 18.108 4.494 18.272 5.029 18.317 6.013 C 18.366 7.078 18.375 7.396 18.375 10.091 C 18.375 12.786 18.366 13.105 18.317 14.169 C 18.272 15.153 18.107 15.688 17.969 16.043 C 17.786 16.514 17.567 16.85 17.214 17.203 C 16.861 17.556 16.524 17.774 16.053 17.958 C 15.697 18.096 15.162 18.26 14.178 18.305 C 13.113 18.354 12.794 18.364 10.097 18.364 C 7.401 18.364 7.082 18.354 6.018 18.305 L 6.018 18.305 Z M 5.934 0.061 C 4.859 0.11 4.125 0.28 3.483 0.53 C 2.819 0.787 2.257 1.133 1.695 1.694 C 1.133 2.255 0.788 2.817 0.53 3.481 C 0.281 4.123 0.11 4.856 0.061 5.931 C 0.011 7.007 0 7.351 0 10.091 C 0 12.832 0.011 13.175 0.061 14.251 C 0.11 15.326 0.281 16.059 0.53 16.701 C 0.788 17.364 1.133 17.928 1.695 18.488 C 2.257 19.049 2.819 19.394 3.483 19.652 C 4.126 19.902 4.859 20.072 5.934 20.121 C 7.011 20.17 7.355 20.182 10.097 20.182 C 12.839 20.182 13.183 20.171 14.26 20.121 C 15.335 20.072 16.069 19.902 16.711 19.652 C 17.375 19.394 17.938 19.049 18.5 18.488 C 19.061 17.928 19.406 17.364 19.664 16.701 C 19.914 16.059 20.085 15.326 20.133 14.251 C 20.182 13.175 20.193 12.832 20.193 10.091 C 20.193 7.351 20.182 7.007 20.133 5.931 C 20.084 4.856 19.914 4.122 19.664 3.481 C 19.406 2.818 19.061 2.255 18.5 1.694 C 17.938 1.132 17.375 0.787 16.712 0.53 C 16.069 0.28 15.335 0.109 14.261 0.061 C 13.184 0.012 12.84 0 10.098 0 C 7.356 0 7.011 0.011 5.934 0.061 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 1.999 2)"/></symbol>
+<symbol id="si-social-facebook" viewBox="0 0 24 24"><path d="M 10.093 11.249 L 10.663 7.631 L 7.153 7.631 L 7.153 5.28 C 7.153 4.291 7.643 3.324 9.21 3.324 L 10.828 3.324 L 10.828 0.243 C 9.886 0.093 8.933 0.012 7.979 0 C 5.089 0 3.203 1.735 3.203 4.873 L 3.203 7.631 L 0 7.631 L 0 11.249 L 3.203 11.249 L 3.203 20 L 7.153 20 L 7.153 11.249 L 10.093 11.249 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 6.446 2)"/></symbol>
+<symbol id="logo-h" viewBox="0 0 294.636 87.617"><g transform="translate(0 0)"><path d="M 65.226 0 L 22.391 0 C 10.025 0 0 10.025 0 22.391 L 0 65.226 C 0 77.592 10.025 87.617 22.391 87.617 L 65.226 87.617 C 77.592 87.617 87.617 77.592 87.617 65.226 L 87.617 22.391 C 87.617 10.025 77.592 0 65.226 0 Z" fill="rgb(255,255,255)"></path></g><g transform="translate(25.123 23.873)"><path d="M 15.841 0 L 7.052 0 C 5.138 4.911 2.771 9.62 0 14.052 L 9.545 14.052 C 11.988 9.595 14.078 4.936 15.79 0.126 C 15.815 0.076 15.841 0.025 15.841 0 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(23.587 23.873)"><path d="M 22.934 22.791 C 19.515 28.843 15.523 34.566 11.056 39.89 L 11.056 39.915 L 0 39.915 C 8.462 31.127 15.412 20.852 20.323 9.67 C 21.305 7.404 22.237 5.062 23.068 2.745 L 24.05 0 L 40.52 0 L 40.52 8.21 L 29.817 8.21 C 29.188 9.796 28.533 11.383 27.853 12.944 C 27.617 13.483 27.377 14.021 27.133 14.556 L 40.495 14.556 L 40.495 22.791 L 22.934 22.791 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(140.743 34.279)"><path d="M 11.306 24.588 C 5.826 24.588 0 20.836 0 12.294 C 0 3.753 5.826 0 11.306 0 C 16.787 0 22.613 3.753 22.613 12.294 C 22.662 20.836 16.787 24.588 11.306 24.588 Z M 18.367 12.294 C 18.367 6.024 14.91 3.506 11.306 3.506 C 7.702 3.506 4.246 5.826 4.246 12.294 C 4.246 18.565 7.702 21.083 11.306 21.083 C 14.91 21.083 18.367 18.318 18.367 12.294 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(167.157 34.675)"><path d="M 9.579 3.703 C 5.53 3.703 4.246 7.307 4.246 12.146 L 4.246 23.65 L 0 23.65 L 0 0 L 4.246 0 L 4.246 4.246 C 5.234 1.284 7.011 0 10.122 0 L 12.788 0 L 12.788 3.703 L 9.579 3.703 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(206.064 34.279)"><path d="M 17.231 8.295 C 16.638 5.481 14.219 3.506 11.109 3.506 C 7.554 3.506 4.295 6.271 4.295 12.195 C 4.295 18.219 7.603 21.083 11.109 21.083 C 14.466 21.083 16.787 18.861 17.379 16.343 L 21.526 16.343 C 20.736 20.786 16.49 24.588 11.01 24.588 C 4.246 24.588 0 19.453 0 12.245 C 0 5.234 4.443 0 11.405 0 C 17.083 0 20.736 4.296 21.28 8.295 L 17.231 8.295 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(228.429 28.75)"><path d="M 7.752 0 L 7.752 5.925 L 12.245 5.925 L 12.245 9.134 L 7.752 9.134 L 7.752 23.107 C 7.752 25.575 7.949 26.168 10.22 26.168 L 13.232 26.168 L 13.232 29.525 L 9.332 29.525 C 4.789 29.525 3.753 28.538 3.753 23.6 L 3.753 9.134 L 0 9.134 L 0 5.925 L 3.753 5.925 L 3.753 0 L 7.752 0 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(244.673 28.75)"><path d="M 3.999 3.851 L 0 3.851 L 0 0 L 3.999 0 L 3.999 3.851 Z M 3.999 29.525 L 0 29.525 L 0 5.925 L 3.999 5.925 L 3.999 29.525 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(250.746 34.675)"><path d="M 17.231 0 L 21.379 0 L 12.492 23.6 L 8.887 23.6 L 0 0 L 4.444 0 L 10.862 18.07 L 17.231 0 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(272.125 34.279)"><path d="M 11.553 21.083 C 15.059 21.083 16.984 19.503 18.021 17.182 L 22.168 17.182 C 21.082 21.28 17.33 24.588 11.602 24.588 C 4.147 24.588 0 19.256 0 12.245 C 0 4.789 4.986 0 11.454 0 C 18.663 0 23.008 6.073 22.465 13.529 L 4.295 13.529 C 4.443 18.614 8.048 21.083 11.553 21.083 Z M 18.218 10.072 C 18.12 6.715 15.651 3.407 11.405 3.407 C 7.85 3.407 4.641 5.333 4.295 10.072 L 18.218 10.072 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(178.267 28.75)"><path d="M 4.542 29.525 L 13.429 4.542 L 22.464 29.525 L 27.254 29.525 L 16.145 0 L 10.96 0 L 0 29.525 L 4.542 29.525 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(118.426 28.75)"><path d="M 4.493 29.525 L 4.493 17.379 L 19.749 17.379 L 19.749 13.528 L 4.493 13.528 L 4.493 3.851 L 20.687 3.851 L 20.687 0 L 0 0 L 0 29.525 L 4.493 29.525 Z" fill="rgb(17,25,54)"></path></g><g transform="translate(183.5 44.896)"><path d="M 12.936 0 C 11.455 0.987 9.875 1.876 8.245 2.666 C 6.122 3.702 3.95 4.542 1.679 5.233 L 0 9.973 C 3.703 9.134 7.208 7.85 10.516 6.27 C 11.899 5.579 13.183 4.887 14.466 4.048 L 12.936 0 Z" fill="rgb(17,25,54)"></path></g></symbol>
+<symbol id="fi-chevron-down-24" viewBox="0 0 24 24"><path d="M -0.53 0.53 L 4.263 5.323 L 5.323 4.263 L 0.53 -0.53 L -0.53 0.53 Z M 6.737 5.323 L 11.53 0.53 L 10.47 -0.53 L 5.677 4.263 L 6.737 5.323 Z M 4.263 5.323 C 4.946 6.007 6.054 6.007 6.737 5.323 L 5.677 4.263 C 5.579 4.36 5.421 4.36 5.323 4.263 L 4.263 5.323 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(1 0 0 1 6.500 9)"/></symbol>
+<symbol id="fi-chevron-up-24" viewBox="0 0 24 24"><path d="M -0.53 0.53 L 4.263 5.323 L 5.323 4.263 L 0.53 -0.53 L -0.53 0.53 Z M 6.737 5.323 L 11.53 0.53 L 10.47 -0.53 L 5.677 4.263 L 6.737 5.323 Z M 4.263 5.323 C 4.946 6.007 6.054 6.007 6.737 5.323 L 5.677 4.263 C 5.579 4.36 5.421 4.36 5.323 4.263 L 4.263 5.323 Z" fill="currentColor" fill-rule="nonzero" transform="matrix(-1 0 0 -1 17.500 14.500)"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="https://www.foractive.com" aria-label="ForActive"><svg class="ic" width="107.61" height="32" viewBox="0 0 294.636 87.617" role="img" aria-label="ForActive"><use href="#logo-h"/></svg></a>
+    <nav>
+      <a href="https://www.foractive.com">Home</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn--sm" href="https://foractive.app.link/hellmfROv5b?~channel=landing_page&~campaign=running_clubs">Get the app</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">For running clubs</span>
+      <h1>Sign-ups, check-ins and memberships for <span>running clubs</span></h1>
+      <p class="lede">A newcomer signs up for one run and pays before they show up. They check in when they arrive. Keep coming back and they'll get offered your membership when it's cheaper for them. You just run the club.</p>
+      <div class="cta-row">
+        <a class="btn btn--cta" href="https://foractive.app.link/hellmfROv5b?~channel=landing_page&~campaign=running_clubs">See how it'd work for your club</a>
+        <span class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 (500+ reviews)</span>
+      </div>
+      <ul class="checks">
+        <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-circle-20"/></svg> 13,000 trainers and coaches already on ForActive</li>
+        <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-circle-20"/></svg> Single-run sign-ups, drop-ins, packages and memberships</li>
+        <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-circle-20"/></svg> $0/month to start, no contracts</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hero-photo">
+        <img src="assets/hero-club-photo.jpg" width="1024" height="1536" alt="A running club posing together after a group run at sunrise" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="whofor">
+  <div class="wrap">
+    <span class="eyebrow">Built for running clubs</span>
+    <div class="chips">
+      <span>Road clubs</span><span>Trail clubs</span><span>Track clubs</span><span>Youth and scholastic programs</span><span>Coached training groups</span><span>Race-training groups</span>
+    </div>
+  </div>
+</section>
+
+<section class="loop" id="how">
+  <div class="wrap">
+    <span class="eyebrow">ForActive for running clubs</span>
+    <h2 class="h2">Runs, runners and money in one place</h2>
+    <p class="lede">ForActive handles the group runs, the members and the money that goes with both, so the person running the club has one place to look, not five.</p>
+
+    <!-- 1 -->
+    <div class="block block--first">
+      <div>
+        <span class="num">1</span>
+        <h3>New runners sign up for one run.</h3>
+        <p class="copy">Publish your weekly runs. A first-timer picks a run, pays for a drop-in and shows up. No membership form first, no Venmo in the parking lot. Your regulars sign up the same way, so you see who's in before you get there.</p>
+        <ul class="checks">
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Single-run sign-up</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>One-time drop-ins</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Memberships and packages alongside single runs</li>
+        </ul>
+      </div>
+      <div>
+        <div class="phone-slot" style="width:calc(390px * var(--f-phone-s)); height:calc(740px * var(--f-phone-s))">
+          <div class="phone" style="height:740px">
+            <div class="notch"></div>
+            <div class="status"><span>12:30</span><span class="sig"><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i><span class="bat"><i></i></span></span></div>
+            <div style="flex:1; overflow:hidden; padding:0 20px; display:flex; flex-direction:column">
+              <div style="padding:8px 0 4px"><svg class="ic" width="24" height="24" aria-hidden="true" focusable="false" style="color:var(--primary-900)"><use href="#fi-arrow-left-24"/></svg></div>
+              <h4 style="font-size:25px; line-height:1.1; margin:10px 0 0">Drop-In Runs</h4>
+              <p style="font-size:13px; line-height:1.5; color:var(--text-muted); margin:8px 0 0">Runners can take open spots when regular participants cancel their sessions. You can customize it for each run independently.</p>
+              <div style="border:1px solid var(--cream-200); border-radius:16px; padding:14px 16px; margin-top:18px; display:flex; gap:12px">
+                <span style="width:22px; height:22px; border-radius:50%; border:2px solid var(--primary-800); flex:none; margin-top:1px"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:600">No</span><span style="display:block; font-size:13px; line-height:1.45; color:var(--text-muted); margin-top:4px">Only registered program participants can attend. Drop-ins are disabled.</span></span>
+              </div>
+              <div style="border:1px solid var(--cream-200); border-radius:16px; padding:14px 16px; margin-top:12px; display:flex; gap:12px">
+                <span style="width:22px; height:22px; border-radius:50%; border:2px solid var(--primary-800); flex:none; margin-top:1px; display:grid; place-items:center"><span style="width:11px; height:11px; border-radius:50%; background:var(--primary-800)"></span></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:600">Yes (Recommended)</span><span style="display:block; font-size:13px; line-height:1.45; color:var(--text-muted); margin-top:4px">Runners can take open spots as single sessions when regular participants cancel.</span></span>
+              </div>
+              <div style="border:1px solid var(--cream-200); border-radius:16px 16px 4px 4px; padding:13px 16px; margin-top:12px; display:flex; align-items:center; gap:10px">
+                <span style="flex:1"><span style="display:block; font-size:12px; color:var(--text-muted)">Sign-up window for drop-ins</span><span style="display:block; font-size:16px; font-weight:500; margin-top:4px">48 hours before session</span></span>
+                <svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--cream-400)"><use href="#fi-chevron-right-20"/></svg>
+              </div>
+              <div style="margin:6px 12px 0; background:var(--white); border-radius:16px; box-shadow:0 10px 28px rgba(0,0,0,.12); padding:12px 14px; display:flex; flex-direction:column; align-items:center; gap:7px">
+                <span style="font-size:11px; color:var(--cream-300)">2 hours before session</span>
+                <span style="font-size:14px; color:var(--cream-400)">12 hours before session</span>
+                <span style="font-size:17px; color:var(--cream-500)">24 hours before session</span>
+                <span style="font-size:19px; font-weight:500; color:var(--primary-900); background:var(--cream-100); border-radius:8px; padding:5px 14px">48 hours before session</span>
+              </div>
+              <div style="margin-top:auto; padding-bottom:26px">
+                <div style="width:100%; height:52px; border-radius:999px; background:var(--primary-900); color:var(--white); font-size:16px; font-weight:500; display:grid; place-items:center">Save</div>
+              </div>
+            </div>
+            <span class="home"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="block">
+      <div class="rev-a">
+        <span class="num">2</span>
+        <h3>You know who actually came.</h3>
+        <p class="copy">Runners check in with a QR code when they arrive. No app yet? Scanning the same code at check-in sets them up. Every check-in lands on that runner's attendance history, so you can see who's done the long run three Saturdays straight. No clipboard, no group-chat headcount.</p>
+        <ul class="checks">
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>QR code check-in</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Attendance history per runner</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>See who your regulars are</li>
+        </ul>
+      </div>
+      <div class="rev-b">
+        <div class="phone-slot" style="width:calc(390px * var(--f-phone-s)); height:calc(810px * var(--f-phone-s))">
+          <div class="phone" style="height:810px">
+            <div class="notch"></div>
+            <div class="status"><span>12:30</span><span class="sig"><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i><span class="bat"><i></i></span></span></div>
+            <div style="padding:6px 20px 14px">
+              <div style="padding:4px 0 10px"><svg class="ic" width="24" height="24" aria-hidden="true" focusable="false" style="color:var(--primary-900)"><use href="#fi-close-line-24"/></svg></div>
+              <h4 style="font-size:28px; line-height:1.05">Check-In</h4>
+              <p style="font-size:14px; color:var(--text-muted); margin:8px 0 0">Scan a runner's code when they arrive.</p>
+            </div>
+            <img src="assets/app-scan-photo.png" width="780" height="1113" alt="Camera view scanning a QR code on a runner's phone" loading="lazy" style="display:block; width:390px; height:557px; object-fit:cover; flex:none">
+            <div style="flex:1; background:var(--cream-50); padding:14px 20px 0">
+              <div style="display:flex; background:var(--cream-100); border-radius:16px; padding:4px">
+                <span style="flex:1; display:grid; place-items:center; height:44px; font-size:15px; font-weight:500; color:var(--primary-900)">Show Code</span>
+                <span style="flex:1; display:grid; place-items:center; height:44px; font-size:15px; font-weight:600; color:var(--primary-900); background:var(--white); border:1px solid var(--cream-300); border-radius:12px">Scan Code</span>
+              </div>
+            </div>
+            <span class="home"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="block block--stack">
+      <div>
+        <span class="num">3</span>
+        <h3>Drop-ins turn into members on their own.</h3>
+        <p class="copy">When a runner goes to pay for another drop-in and one of your memberships or packages would cost them less per run, the app offers it to them right there, so you don't have to make the ask. Only sell drop-ins? Once runners keep coming back, we'll suggest a 4-, 8- or 12-run package for you to add. That's the "you should really just join" conversation, handled.</p>
+        <ul class="checks checks--wrap">
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Better offer suggested at checkout</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>4-, 8- or 12-run package suggestions</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Recurring membership payments, automated</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="phone-slot" style="margin:0; width:calc(390px * var(--f-phone-s)); height:calc(775px * var(--f-phone-s))">
+          <div class="phone" style="height:775px; background:var(--cream-100)">
+            <div class="notch"></div>
+            <div class="status"><span>12:30</span><span class="sig"><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i><span class="bat"><i></i></span></span></div>
+            <div style="flex:1; padding:0 18px; display:flex; flex-direction:column">
+              <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 0 2px">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--primary-900)"><use href="#fi-close-line-20"/></svg>
+                <span style="font-size:15px; font-weight:500">Learn More</span>
+              </div>
+              <h4 style="font-size:24px; line-height:1.2; margin:10px 0 0">Monica requests payment through ForActive</h4>
+              <p style="font-size:13px; color:var(--text-muted); margin:7px 0 0">💫 Your payment goes straight to your coach!</p>
+              <div style="background:var(--white); border-radius:16px; margin-top:14px; overflow:hidden">
+                <div style="display:flex; align-items:center; gap:14px; padding:16px 18px">
+                  <span style="width:62px; height:62px; border-radius:50%; overflow:hidden; flex:none; display:block"><img src="assets/monica-avatar.png" width="200" height="200" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; transform:scale(1.08)"></span>
+                  <span>
+                    <span style="display:inline-block; background:var(--ink-900); color:var(--white); font-size:10px; font-weight:600; letter-spacing:1.2px; padding:4px 10px; border-radius:999px">TRAINER</span>
+                    <span style="display:block; font-size:19px; font-weight:600; margin-top:5px">Monica</span>
+                    <span style="display:block; font-size:14px; color:var(--text-muted); margin-top:2px">Riverside Run Club</span>
+                  </span>
+                </div>
+                <div style="height:1px; background:var(--cream-200)"></div>
+                <div style="padding:16px 18px 18px">
+                  <div style="border-radius:16px; padding:16px; background:linear-gradient(120deg, #FBF3D0 0%, #FAD8C4 55%, #F7C9D4 100%)">
+                    <div style="display:flex; align-items:center; justify-content:space-between">
+                      <span style="font-size:18px; font-weight:600">Drop-In Pass</span>
+                      <span style="font-size:13px">Details</span>
+                    </div>
+                    <div style="height:1px; background:rgba(17,25,54,.12); margin:12px 0"></div>
+                    <div style="font-size:12px; color:var(--cream-700)">You pay now</div>
+                    <div style="display:flex; align-items:baseline; gap:6px; margin-top:4px"><span style="font-size:22px; font-weight:700">$5.00</span><span style="font-size:13px; font-weight:500">+ Service Fee · $0.18</span></div>
+                    <div style="height:1px; background:rgba(17,25,54,.12); margin:12px 0"></div>
+                    <div style="font-size:12px; color:var(--cream-700)">Expires</div>
+                    <div style="font-size:16px; font-weight:600; margin-top:4px">1 Run</div>
+                  </div>
+                  <div style="position:relative; margin-top:20px">
+                    <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:var(--primary-800); color:var(--white); font-size:10px; font-weight:600; letter-spacing:.8px; padding:4px 12px; border-radius:999px; white-space:nowrap">SAVE UP TO $1 PER RUN</span>
+                    <div style="height:50px; border:1.5px solid var(--primary-800); border-radius:999px; display:grid; place-items:center; font-size:17px; font-weight:600; color:var(--primary-800)">Get Better Plan</div>
+                  </div>
+                </div>
+              </div>
+              <p style="font-size:12px; line-height:1.5; color:var(--text-muted); margin:14px 0 0">By continuing you confirm you agree to the <span style="text-decoration:underline">Riverside Run Club Terms &amp; Conditions</span> and <span style="text-decoration:underline">Cancelation Policy</span></p>
+              <div style="margin-top:auto; padding-bottom:24px">
+                <div style="height:54px; border-radius:999px; background:var(--primary-800); color:var(--white); display:flex; align-items:center; justify-content:center; gap:9px; font-size:16px; font-weight:500"><svg class="ic" width="18" height="18" aria-hidden="true" focusable="false" style="color:var(--white)"><use href="#fi-security-20"/></svg>Confirm &amp; Pay · $5.18</div>
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px">
+                  <span style="font-size:12px; color:var(--text-muted)">🔒 Safe &amp; Secure Payment Processing</span>
+                  <span style="background:var(--white); border:1px solid var(--cream-300); border-radius:8px; padding:5px 10px; font-size:12px; white-space:nowrap">Powered by <span style="font-weight:700; font-size:13px">stripe</span></span>
+                </div>
+              </div>
+            </div>
+            <span class="home"></span>
+          </div>
+        </div>
+        <div class="phone-slot" style="margin:0; width:calc(390px * var(--f-phone-s)); height:calc(750px * var(--f-phone-s))">
+          <div class="phone" style="height:750px; background:#8B8B8B">
+            <div class="notch" style="background:var(--ink-900)"></div>
+            <div class="status" style="color:var(--white)"><span>12:30</span><span class="sig"><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i><span class="bat"><i></i></span></span></div>
+            <div style="flex:1"></div>
+            <div style="background:var(--white); border-radius:24px 24px 44px 44px; padding:24px 20px 30px; position:relative">
+              <h4 style="font-size:24px; line-height:1.25">Maya R. just bought a $5 drop-in.</h4>
+              <p style="font-size:15px; line-height:1.5; color:var(--text-muted); margin:10px 0 0">They're ready to commit to more runs. Offer them a package and get paid upfront.</p>
+              <span style="display:block; width:88px; height:88px; border-radius:50%; overflow:hidden; margin:18px auto 0"><img src="assets/maya-avatar.png" width="210" height="210" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover"></span>
+              <div style="background:var(--cream-50); border:1px solid var(--cream-200); border-radius:18px; padding:18px 16px 16px; margin-top:18px; text-align:center">
+                <div style="font-size:15px; font-weight:600; line-height:1.4">Turn "Long Run Drop-In" into packages.</div>
+                <div style="display:flex; align-items:center; gap:10px; margin-top:20px">
+                  <div style="flex:1; position:relative; background:var(--white); border:1px solid var(--cream-200); border-radius:14px; padding:20px 10px 12px">
+                    <span style="position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:var(--cream-700); color:var(--white); font-size:10px; font-weight:600; letter-spacing:1px; padding:4px 12px; border-radius:999px; white-space:nowrap">DROP-IN</span>
+                    <div style="font-size:12px; color:var(--text-muted)">Only</div>
+                    <div style="font-size:20px; font-weight:600; color:var(--cream-600); margin-top:2px">$5.00</div>
+                    <div style="font-size:11px; color:var(--text-muted); margin-top:2px">one run</div>
+                  </div>
+                  <svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#fi-arrow-right-20"/></svg>
+                  <div style="flex:1; position:relative; background:var(--white); border:1px solid var(--cream-200); border-radius:14px; padding:20px 10px 12px">
+                    <span style="position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:var(--green-600); color:var(--white); font-size:10px; font-weight:600; letter-spacing:1px; padding:4px 12px; border-radius:999px; white-space:nowrap">PACKAGES</span>
+                    <div style="font-size:12px; color:var(--text-muted)">Up to</div>
+                    <div style="font-size:20px; font-weight:700; margin-top:2px">$48.00</div>
+                    <div style="font-size:11px; color:var(--text-muted); margin-top:2px">4, 8, 12 runs</div>
+                  </div>
+                </div>
+              </div>
+              <div style="height:52px; border-radius:999px; background:var(--primary-800); color:var(--white); font-size:16px; font-weight:500; display:grid; place-items:center; margin-top:20px">Continue</div>
+              <span class="home" style="bottom:9px"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="block">
+      <div class="rev-a">
+        <span class="num">4</span>
+        <h3>The club's money lands in one place.</h3>
+        <p class="copy">Drop-ins, packages, memberships, program fees, event payments: runners, or their parents, pay by card, Apple Pay or Google Pay when they sign up, and it all shows up in one place. No chasing dues at the start of the season, no piecing together who paid from screenshots.</p>
+        <ul class="checks">
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Card, Apple Pay and Google Pay</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Standard payouts free, 2 to 3 business days</li>
+          <li><svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--green-600)"><use href="#fi-check-20"/></svg>Runs, runners and payments in one place</li>
+        </ul>
+      </div>
+      <div class="rev-b">
+        <div class="phone-slot" style="width:calc(390px * var(--f-phone-s)); height:calc(800px * var(--f-phone-s))">
+          <div class="phone" style="height:800px">
+            <div class="notch"></div>
+            <div class="status"><span>12:30</span><span class="sig"><i style="height:6px"></i><i style="height:9px"></i><i style="height:12px"></i><span class="bat"><i></i></span></span></div>
+            <div style="flex:1; overflow:hidden; padding:0 20px; display:flex; flex-direction:column; position:relative">
+              <h4 style="font-size:28px; margin:14px 0 0">Plans</h4>
+              <div style="display:flex; gap:22px; margin-top:20px; border-bottom:1px solid var(--cream-200)">
+                <span style="font-size:15px; color:var(--text-muted); padding-bottom:10px">Pricing Plans</span>
+                <span style="font-size:15px; color:var(--text-muted); padding-bottom:10px">Cashflow</span>
+                <span style="font-size:15px; font-weight:600; color:var(--primary-900); padding-bottom:10px; border-bottom:2px solid var(--primary-900); margin-bottom:-1px">Transactions</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px; background:var(--cream-50); border-radius:14px; padding:16px 18px; margin-top:18px">
+                <span style="font-size:17px; font-weight:600">Total Earnings</span>
+                <svg class="ic" width="20" height="20" aria-hidden="true" focusable="false" style="color:var(--cream-500)"><use href="#fi-chevron-down-20"/></svg>
+                <span style="margin-left:auto; font-size:18px; font-weight:700">$2,850.00</span>
+              </div>
+              <div style="display:flex; gap:8px; margin-top:16px">
+                <span style="display:flex; align-items:center; gap:6px; background:var(--ink-900); color:var(--white); font-size:13px; font-weight:500; padding:8px 14px; border-radius:999px">Transactions<svg class="ic" width="16" height="16" aria-hidden="true" focusable="false" style="color:var(--white)"><use href="#fi-chevron-down-20"/></svg></span>
+                <span style="display:flex; align-items:center; gap:6px; border:1px solid var(--cream-300); font-size:13px; font-weight:500; padding:8px 14px; border-radius:999px">Status<svg class="ic" width="16" height="16" aria-hidden="true" focusable="false" style="color:var(--primary-900)"><use href="#fi-chevron-down-20"/></svg></span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--cream-200); margin-top:14px">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#si-card"/></svg>
+                <span style="width:1px; height:34px; background:var(--cream-200)"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:500">6 Apr, 8:23 PM</span><span style="display:block; font-size:12px; color:var(--text-muted); margin-top:3px">Long Run 8x · Purchase · Online</span></span>
+                <span style="display:flex; flex-direction:column; align-items:flex-end; gap:5px"><span style="font-size:15px; font-weight:600">$32.00</span><span style="background:var(--yellow-50); color:var(--yellow-600); font-size:10px; font-weight:600; letter-spacing:.8px; padding:3px 8px; border-radius:6px">PENDING</span></span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--cream-200)">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#si-card"/></svg>
+                <span style="width:1px; height:34px; background:var(--cream-200)"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:500">7 Mar, 8:00 PM</span><span style="display:block; font-size:12px; color:var(--text-muted); margin-top:3px">Long Run 8x · Purchase · Online</span></span>
+                <span style="display:flex; flex-direction:column; align-items:flex-end; gap:5px"><span style="font-size:15px; font-weight:600">$32.00</span><span style="background:var(--green-50); color:var(--green-600); font-size:10px; font-weight:600; letter-spacing:.8px; padding:3px 8px; border-radius:6px">COMPLETE</span></span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--cream-200)">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#si-card"/></svg>
+                <span style="width:1px; height:34px; background:var(--cream-200)"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:500">10 Feb, 10:00 AM</span><span style="display:block; font-size:12px; color:var(--text-muted); margin-top:3px">Long Run 8x · Purchase · Online</span></span>
+                <span style="display:flex; flex-direction:column; align-items:flex-end; gap:5px"><span style="font-size:15px; font-weight:600">$32.00</span><span style="background:var(--green-50); color:var(--green-600); font-size:10px; font-weight:600; letter-spacing:.8px; padding:3px 8px; border-radius:6px">COMPLETE</span></span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:13px 0; border-top:1px solid var(--cream-200)">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#si-cash"/></svg>
+                <span style="width:1px; height:34px; background:var(--cream-200)"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:500">2 Jan, 10:10 AM</span><span style="display:block; font-size:12px; color:var(--text-muted); margin-top:3px">Membership · Purchase · Cash</span></span>
+                <span style="display:flex; flex-direction:column; align-items:flex-end; gap:5px"><span style="font-size:15px; font-weight:600">$25.00</span><span style="background:var(--green-50); color:var(--green-600); font-size:10px; font-weight:600; letter-spacing:.8px; padding:3px 8px; border-radius:6px">COMPLETE</span></span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:13px 0 20px; border-top:1px solid var(--cream-200); margin-top:auto; opacity:.4">
+                <svg class="ic" width="22" height="22" aria-hidden="true" focusable="false" style="color:var(--cream-600)"><use href="#si-card"/></svg>
+                <span style="width:1px; height:34px; background:var(--cream-200)"></span>
+                <span style="flex:1"><span style="display:block; font-size:15px; font-weight:500">2 Jan, 10:06 AM</span><span style="display:block; font-size:12px; color:var(--text-muted); margin-top:3px">Long Run 8x · Purchase · Online</span></span>
+                <span style="display:flex; flex-direction:column; align-items:flex-end; gap:5px"><span style="font-size:15px; font-weight:600">$32.00</span><span style="color:var(--red-400); font-size:10px; font-weight:600; letter-spacing:.8px; padding:3px 0">CANCELED</span></span>
+              </div>
+              <div style="position:absolute; bottom:18px; left:16px; right:92px; height:62px; background:var(--white); border-radius:999px; box-shadow:0 10px 30px rgba(0,0,0,.16); display:flex; align-items:center; justify-content:space-around; padding:0 10px">
+                <svg class="ic" width="24" height="24" aria-hidden="true" focusable="false" style="color:var(--primary-800)"><use href="#ni-home"/></svg>
+                <span style="display:flex; align-items:center; gap:7px; background:var(--cream-100); border-radius:999px; padding:6px 12px 6px 6px">
+                  <span style="width:28px; height:28px; border-radius:50%; background:var(--primary-800); display:grid; place-items:center"><svg class="ic" width="16" height="16" aria-hidden="true" focusable="false" style="color:var(--white)"><use href="#ni-earnings-filled"/></svg></span>
+                  <span style="font-size:13px; font-weight:600; color:var(--primary-800)">Plans</span>
+                </span>
+                <svg class="ic" width="24" height="24" aria-hidden="true" focusable="false" style="color:var(--primary-800)"><use href="#ni-clients"/></svg>
+                <svg class="ic" width="24" height="24" aria-hidden="true" focusable="false" style="color:var(--primary-800)"><use href="#ni-calendar"/></svg>
+                <span style="display:flex; flex-direction:column; justify-content:center; gap:4px; width:20px; height:24px"><span style="height:2.5px; background:var(--primary-800); border-radius:2px"></span><span style="height:2.5px; background:var(--primary-800); border-radius:2px"></span><span style="height:2.5px; background:var(--primary-800); border-radius:2px"></span></span>
+              </div>
+              <span style="position:absolute; bottom:20px; right:16px; width:58px; height:58px; border-radius:50%; background:var(--primary-800); box-shadow:0 10px 30px rgba(0,0,0,.2); display:grid; place-items:center"><svg class="ic" width="26" height="26" aria-hidden="true" focusable="false" style="color:var(--white)"><use href="#fi-add-24"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="realtalk">
+      <span class="eyebrow">Real talk</span>
+      <p>One thing it won't do: find you runners. That's still you, your routes and your group chat. ForActive handles what happens once they show up.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Pricing</span>
+      <h2 class="h2">Pricing so good you wouldn't believe it's true</h2>
+      <p class="lede">Pay as you go. No monthly subscription. No commitments. You only pay when your club earns.</p>
+      <div class="cta-row"><a class="btn btn--cta" href="https://foractive.app.link/hellmfROv5b?~channel=landing_page&~campaign=running_clubs">Get the app</a></div>
+    </div>
+    <div class="price-card">
+      <span class="eyebrow" style="color:var(--cream-600)">No-risk start from</span>
+      <div class="amount"><b>$0</b><span>/month</span></div>
+      <div class="row"><span>Service fee</span><span>$0</span></div>
+      <div class="row"><span>Payout fee</span><span>$0</span></div>
+      <div class="row"><span>Payment account fee</span><span>$30 flat, only in a calendar month your club takes in over $1,000</span></div>
+      <p class="note">Nothing before that. Stop any time, no penalties.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Real reviews</span>
+    <h2 class="h2">Trusted by coaches and trainers across the US</h2>
+    <p class="lede">5-star reviews from people who use ForActive every day.</p>
+    <div class="review-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>Simple and supportive</h3>
+        <p>ForActive flips the script with a real industry-case approach that actually cares. As a small business owner, that gives me peace of mind.</p>
+        <div class="who"><i>DO</i>Don Wilson</div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>Exactly what I needed</h3>
+        <p>I was tired of chasing clients for payment. This makes it seamless, and the support you have with questions and guidance is amazing.</p>
+        <div class="who"><i>PO</i>Power Play Fit</div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <h3>Fast, easy and professional</h3>
+        <p>It makes managing client payments fast, easy, and professional. No more awkward reminders or missed payments.</p>
+        <div class="who"><i>DB</i>DB Elevate NY</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="h2">Coach, get to know ForActive</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" type="button" aria-expanded="true" aria-controls="faq-a-0" id="faq-q-0"><span>Can someone try a run without joining the club?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-0" role="region" aria-labelledby="faq-q-0">Yes. They sign up for one run and pay for a drop-in. No membership needed to try you out.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1"><span>Do our runners have to download the app?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">Yes, but nobody has to hunt for it. A runner scans your QR code at check-in and the app takes it from there; they're set up on the spot.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2"><span>We only sell drop-ins. Is that a problem?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">No. Start there. Once runners keep buying drop-ins, ForActive suggests a 4-, 8- or 12-run package for you to add to your offer.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3"><span>Do we have to move regulars onto a membership ourselves?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">No. When a runner goes to pay for a drop-in and one of your memberships or packages would cost them less per run, the app offers it to them at checkout.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4"><span>What about runners who pay cash?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">Fine. There's a cash option, so a runner who pays cash gets recorded like everyone else: same list, same attendance history.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5"><span>Can we take program fees and event payments too?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5">Yes: membership dues, program fees, recurring programs and event payments, in one place.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6"><span>What does it cost the club?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6">ForActive is free to start and stays free in any calendar month your club takes in less than $1,000. Every feature at no extra cost: QR check-in, memberships, packages. Over $1,000 in a calendar month, it's a flat $30 that month.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-7" id="faq-q-7"><span>Is there a contract? What if we stop?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7">No contracts. Stop any time, no penalties. Your data belongs to the club and stays yours: your members, your attendance history. What stops is the features, not the list.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8"><span>We run a youth program. Can a parent sign up and pay for their kid?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8">Yes. That's the everyday case: the parent signs up and pays, the kid runs.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-9" id="faq-q-9"><span>Who do we talk to if we're stuck?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-9" role="region" aria-labelledby="faq-q-9">A real person. Support is a human who answers.</p>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-10" id="faq-q-10"><span>Are payments secure?</span><svg class="ic ic--down" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-down-24"/></svg><svg class="ic ic--up" width="24" height="24" aria-hidden="true" focusable="false"><use href="#fi-chevron-up-24"/></svg></button>
+        <p class="faq-a" id="faq-a-10" role="region" aria-labelledby="faq-q-10">Yes. ForActive uses Stripe to process every payment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2400&auto=format&fit=crop" alt="" loading="lazy"></div>
+  <div class="scrim"></div>
+  <div class="wrap">
+    <h2>Show up and run. We'll handle the sign-ups, the check-ins and the money.</h2>
+    <p>Get the app, publish your first run, send the link to your runners. You're live.</p>
+    <div class="cta-row"><a class="btn btn--cta" href="https://foractive.app.link/hellmfROv5b?~channel=landing_page&~campaign=running_clubs">Get the app</a></div>
+  </div>
+  <span class="credit">Photo: <a href="https://unsplash.com/@mzemlickis" rel="noopener">Mārtiņš Zemlickis</a> on Unsplash</span>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a href="https://www.foractive.com" aria-label="ForActive"><svg class="ic" width="94.16" height="28" viewBox="0 0 294.636 87.617" role="img" aria-label="ForActive"><use href="#logo-h"/></svg></a>
+    <nav>
+      <a href="https://www.foractive.com/terms-conditions">Terms &amp; Conditions</a>
+      <a href="https://www.foractive.com/privacy-policy">Privacy Policy</a>
+      <a href="https://www.foractive.com/cookie-policy">Cookie Policy</a>
+      <a href="https://www.foractive.com/pricing">Pricing</a>
+      <a href="mailto:info@foractive.com?subject=Running%20clubs%20on%20ForActive">Contact</a>
+    </nav>
+    <span class="social">
+      <a href="https://www.instagram.com/foractivecom/" aria-label="ForActive on Instagram" rel="noopener" style="color:inherit"><svg class="ic" width="22" height="22" aria-hidden="true" focusable="false"><use href="#si-social-instagram"/></svg></a>
+      <a href="https://www.facebook.com/foractiveapp" aria-label="ForActive on Facebook" rel="noopener" style="color:inherit"><svg class="ic" width="22" height="22" aria-hidden="true" focusable="false"><use href="#si-social-facebook"/></svg></a>
+    </span>
+  </div>
+  <div class="wrap copy">© 2026 ForActive</div>
+</footer>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', function () {
+      var open = item.classList.contains('open');
+      items.forEach(function (i) { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded', 'false'); });
+      if (!open) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
