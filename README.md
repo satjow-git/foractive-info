@@ -12,7 +12,8 @@ Static pages served at **foractive.info** (GitHub Pages, custom domain).
 The page implements the Claude Design canvas *ForActive Running Clubs* (project
 `d50e00e1-fa97-46e2-be6f-16c05c66127e`, files `RunClub*.dc.html`) on the ForActive Design
 System (`51f4e1a8-2c7a-4be9-a8f1-07c801d73d0b`). Copy comes from
-`docs/positioning/running-clubs-value-proposition.md` in the growth-agent repo.
+`docs/positioning/running-clubs-value-proposition.md` in the growth-agent repo
+(this folder lives at `site/foractive.info/` there; `publish.sh` has the GitHub Pages + DNS steps).
 
 ## Build
 
